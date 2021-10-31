@@ -5,9 +5,9 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.MYSQL5Dialect
-    generate-ddl: true
-    show-sql: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.MYSQL5Dialect
+#    generate-ddl: true
+#    show-sql: true
