@@ -15,9 +15,6 @@ import java.util.List;
 @RestController
 public class IndexController {
 
-
-    private final Environment environment;
-
     @GetMapping("/index")
     public ResponseEntity<String> index(){
         System.out.println("commit을 위한 문구");
