@@ -1,0 +1,27 @@
+Started by user [8mha:////4FZhyH3wCLcbuDQ43nydbh6TSE5yWn5t1UOrtAEMfS7oAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL98sScktQiAFyvQRfBAAAA[0mwalter
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/docker-nginx
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/twer4774/docker-nginx
+ > git init /var/jenkins_home/workspace/docker-nginx # timeout=10
+Fetching upstream changes from https://github.com/twer4774/docker-nginx
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/twer4774/docker-nginx +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/twer4774/docker-nginx # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 2ef07644496a4a76e4709b881983065185787740 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 2ef07644496a4a76e4709b881983065185787740 # timeout=10
+Commit message: "test: jenkins 빌드를 위한 커밋"
+First time build. Skipping changelog.
+[docker-nginx] $ /bin/sh -xe /tmp/jenkins6822314966561229538.sh
++ ./gradlew clean build
+Error: Could not find or load main class org.gradle.wrapper.GradleWrapperMain
+Caused by: java.lang.ClassNotFoundException: org.gradle.wrapper.GradleWrapperMain
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

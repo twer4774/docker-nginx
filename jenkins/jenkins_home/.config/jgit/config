@@ -1,0 +1,3 @@
+[filesystem "Eclipse Foundation|11.0.12|grpcfuse"]
+	timestampResolution = 479 microseconds
+	minRacyThreshold = 0 nanoseconds

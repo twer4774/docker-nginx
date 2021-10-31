@@ -1,0 +1,57 @@
+Started by user [8mha:////4FZhyH3wCLcbuDQ43nydbh6TSE5yWn5t1UOrtAEMfS7oAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL98sScktQiAFyvQRfBAAAA[0mwalter
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/docker-nginx
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/docker-nginx/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/twer4774/docker-nginx # timeout=10
+Fetching upstream changes from https://github.com/twer4774/docker-nginx
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/twer4774/docker-nginx +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision cab058446cd0a753343e7d8d68a528bcb1cde6be (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cab058446cd0a753343e7d8d68a528bcb1cde6be # timeout=10
+Commit message: "add: gradle files"
+ > git rev-list --no-walk 2ef07644496a4a76e4709b881983065185787740 # timeout=10
+[docker-nginx] $ /bin/sh -xe /tmp/jenkins1088890274505258722.sh
++ ./gradlew clean build
+Downloading https://services.gradle.org/distributions/gradle-7.2-bin.zip
+..........10%...........20%...........30%...........40%...........50%...........60%...........70%...........80%...........90%...........100%
+
+Welcome to Gradle 7.2!
+
+Here are the highlights of this release:
+ - Toolchain support for Scala
+ - More cache hits when Java source files have platform-specific line endings
+ - More resilient remote HTTP build cache behavior
+
+For more details see https://docs.gradle.org/7.2/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :clean UP-TO-DATE
+> Task :compileJava
+/var/jenkins_home/workspace/docker-nginx/src/main/java/walter/unit/dockernginx/controller/IndexController.java:19: error: variable environment not initialized in the default constructor
+    private final Environment environment;
+                              ^
+1 error
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2m 4s
+2 actionable tasks: 1 executed, 1 up-to-date
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
