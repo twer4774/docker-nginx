@@ -18,7 +18,7 @@ public class IndexController {
     @GetMapping("/index")
     public ResponseEntity<String> index(){
         System.out.println("commit1을 위한 문구");
-        return ResponseEntity.ok().body("index");
+        return ResponseEntity.ok().body("index2");
     }
 
 
