@@ -1,6 +1,7 @@
 package walter.unit.dockernginx.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +16,12 @@ import java.util.List;
 @RestController
 public class IndexController {
 
+    @Value("${index.string}")
+    private String indexString;
+
     @GetMapping("/index")
     public ResponseEntity<String> index(){
-        System.out.println("commit1을 위한 문구");
-        return ResponseEntity.ok().body("index2");
+        return ResponseEntity.ok().body(indexString);
     }
 
 

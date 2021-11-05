@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    image: app:0.1
+    container_name: app_blue
+    environment:
+      - "spring_profiles_active=blue"
+    ports:
+      - "8081:8081"

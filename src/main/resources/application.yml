@@ -1,6 +1,11 @@
-server:
-  port: 8081
 spring:
+
+  profiles:
+    group:
+      "blue" : "blue"
+      "green" : "green"
+    default: "blue"
+
   datasource:
     url: jdbc:mysql://test_db
     username: root
@@ -13,3 +18,16 @@ spring:
 #    database-platform: org.hibernate.dialect.MYSQL5Dialect
 #    generate-ddl: true
 #    show-sql: true
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "blue"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "green"
